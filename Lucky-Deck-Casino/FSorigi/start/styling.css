@@ -1,0 +1,228 @@
+/* ═════ Palette + font ═════════════════════════════════════ */
+:root{
+    --dark:#0b0d0f;
+    --gold:#f5c033;
+    --gold-dark:#c49623;
+  }
+  body{background:#111;color:#fff;font-family:"Inter",sans-serif;margin:0}
+  
+  /* ═════ Top bar ════════════════════════════════════════════ */
+  .topbar{background:var(--dark);min-height:68px}
+  .become-btn{border:1px solid var(--gold);color:#fff;font-weight:600}
+  .become-btn:hover{background:var(--gold);color:#000}
+  .logo-text{font-size:1.9rem;letter-spacing:.05em}
+  
+  /* ═════ Branch strip ═══════════════════════════════════════ */
+  .branch-strip{background:#141414}
+  .branch-strip .nav-link{color:#ccc;font-weight:500;letter-spacing:.05em}
+  .branch-strip .nav-link:hover{color:var(--gold)}
+  
+  /* ═════ Hero carousel ══════════════════════════════════════ */
+  #hero{height:75vh;min-height:460px}
+  #hero .carousel-inner,.carousel-item{height:100%}
+  .object-fit-cover{object-fit:cover}
+  .dark-overlay{position:absolute;inset:0;background:rgba(0,0,0,.55)}
+  .hero-content{
+    position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);
+    text-align:center;max-width:90%;z-index:2
+  }
+  .hero-btn{
+    border:2px solid var(--gold-dark);color:#fff;font-weight:600;letter-spacing:.1em;
+    background:transparent
+  }
+  .hero-btn:hover{background:var(--gold-dark);color:#000}
+  .carousel-control-prev-icon,.carousel-control-next-icon{filter:invert(1);width:3rem;height:3rem}
+  
+  /* numbered indicators */
+  .carousel-indicators button{
+    width:40px;height:40px;border-radius:50%;background:transparent;
+    border:2px solid #c4b48d;color:#fff;font-size:1rem;
+    display:flex;align-items:center;justify-content:center;opacity:.6
+  }
+  .carousel-indicators .active{background:var(--gold-dark);opacity:1;border:none}
+ /* ── palette used elsewhere ──
+:root{ --dark:#0b0d0f; --gold:#f5c033; --gold-dark:#c49623; }
+*/
+
+/* — TOP BAR — */
+.topbar{background:var(--dark);min-height:68px}
+
+/* burger + “Menu” */
+.menu-btn{background:transparent;border:0;color:var(--gold-dark);font-weight:600}
+.menu-btn:hover{color:var(--gold)}
+
+/* member button */
+.become-btn{
+  border:2px solid var(--gold-dark);padding:.45rem 1.9rem;
+  background:transparent;color:#fff;font-size:.9rem;
+  text-transform:uppercase;font-weight:600;border-radius:2px}
+.become-btn:hover{background:var(--gold-dark);color:#000}
+
+/* ------ centred brand wrapper ------ */
+.brand-wrap{
+  display:inline-flex;align-items:center;gap:.55rem;
+  color:#fff;font-weight:700;font-size:1.9rem;letter-spacing:.05em;
+}
+.brand-icon{height:42px;width:auto}
+.brand-name{line-height:1}
+
+/* utility links (right) */
+.utility-link{display:flex;align-items:center;gap:.3rem;
+  color:#e6e6e6;text-decoration:none;font-weight:600}
+.utility-link:hover{color:var(--gold)}
+/* make the light section blend with dark site */
+#welcome{color:#111;}                         /* dark text on light */
+@media (prefers-color-scheme:dark){
+  #welcome{background:#141414;color:#eee;}
+}
+.btn-gold{background:var(--gold);border:none;}
+.btn-gold:hover{background:var(--gold-dark);}
+/* slim red text-link with arrow ------------------------------------ */
+.link-red-arrow{
+    display:inline-flex;align-items:center;gap:.35rem;
+    color:#c80022;                         /* base red */
+    font-weight:700;letter-spacing:.12em;text-transform:uppercase;
+    text-decoration:none;transition:color .2s;
+  }
+  .link-red-arrow i{transition:transform .2s;}   /* icon only */
+  .link-red-arrow:hover{
+    color:#ff143c;                         /* brighter on hover */
+  }
+  .link-red-arrow:hover i{
+    transform:translateX(4px);             /* arrow slides right */
+  }
+/* slim red text-link with arrow ­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­ */
+.link-red-arrow{
+    display:inline-flex;align-items:center;gap:.35rem;
+    color:#c80022;                         /* base red */
+    font-weight:700;letter-spacing:.12em;text-transform:uppercase;
+    text-decoration:none;transition:color .2s, transform .2s;  /* ★ add transform */
+  }
+  .link-red-arrow i{transition:transform .2s;}                 /* arrow only */
+  
+  .link-red-arrow:hover{
+    color:#ff143c;                         /* brighter red */
+    transform:scale(1.08);                 /* ★ grow by 8 % */
+  }
+  .link-red-arrow:hover i{
+    transform:translateX(4px);             /* arrow slides right */
+  }
+  /* ── grey block background ─────────────────── */
+  .signup-section{
+    background:#c5c5c5;   /* deep black-grey used elsewhere */
+    color:#0a0a0a;           /* make normal text white */
+  }
+  
+
+/* ── input boxes ───────────────────────────── */
+.form-field{
+  background:#ffffff;border:none;border-radius:0;
+  height:56px;padding:0 1rem;font-size:1rem;
+}
+.form-field::placeholder{color:#888;font-style:italic}
+
+/* ── square checkboxes like Napoleons ──────── */
+.form-check-input.square{
+  width:20px;height:20px;border:2px solid #333;border-radius:0;cursor:pointer
+}
+.form-check-input.square:checked{
+  background-color:#000;border-color:#000
+}
+/* === footer colours & spacing === */
+.footer-dark{
+    background:#151515;color:#eee;
+  }
+  .footer-h{
+    font-size:.8rem;letter-spacing:.25em;
+    text-transform:uppercase;font-weight:700;margin-bottom:1rem;color:#777;
+  }
+  .footer-input{
+    background:#333;border:none;color:#eee;
+  }
+  .footer-input::placeholder{color:#999;font-style:italic}
+  .footer-list{list-style:none;padding:0;margin:0}
+  .footer-list a{color:#ccc;text-decoration:none}
+  .footer-list a:hover{color:#f5c033}
+  
+  .social{
+    display:inline-flex;align-items:center;justify-content:center;
+    width:38px;height:38px;border-radius:50%;
+    background:#333;color:#d6b48a;font-size:1.1rem;
+    transition:.2s; text-decoration:none;
+  }
+  .social:hover{background:#f5c033;color:#000}
+/* reusable gold button ------------------------------------------- */
+.btn-gold{
+    background:var(--gold);          /* #f5c033 from palette */
+    border:none;color:#000;font-weight:700;
+    text-transform:uppercase;letter-spacing:.05em;
+  }
+  .btn-gold:hover{
+    background:var(--gold-dark);     /* #c49623 */
+    color:#000;
+  }
+/* FAQ look & arrow rotation -------------------------------------- */
+.faq-section{background:#f6f6f6;color:#111;}             /* light backdrop */
+.accordion-button.faq-btn{
+  background:#f6f6f6;color:#111;font-size:1.25rem;font-weight:500;
+  padding:1.4rem 0;box-shadow:none;
+}
+.accordion-button::after{                                /* arrow style */
+  content:"\f282";                                       /* Bootstrap icon chevron-down */
+  font-family:bootstrap-icons;font-size:1.1rem;
+  color:#c49623;transition:transform .25s;
+}
+.accordion-button:not(.collapsed)::after{
+  transform:rotate(180deg);                              /* flips up when open */
+}
+.accordion-body{padding-bottom:1.4rem;padding-top:.25rem;}
+/* ---- split-section shared styles -------------------------------- */
+.split-section{background:#000000;}         /* change or remove if you prefer dark */
+.split-img{object-fit:cover;height:100%;max-height:520px}
+@media (min-width:992px){ .split-img{max-height:none;height:100%;} }
+
+.split-copy{max-width:540px;margin:auto;}
+.split-h{
+  font-size:2.25rem;font-weight:700;line-height:1.1;
+  text-transform:uppercase;letter-spacing:.06em;
+}
+
+/* reuse earlier red arrow link */
+.link-red-arrow{
+  display:inline-flex;align-items:center;gap:.35rem;
+  color:#c80022;font-weight:700;letter-spacing:.12em;text-transform:uppercase;
+  text-decoration:none;transition:color .2s, transform .2s;
+}
+.link-red-arrow i{transition:transform .2s;}
+.link-red-arrow:hover{color:#ff143c;transform:scale(1.08);}
+.link-red-arrow:hover i{transform:translateX(4px);}
+ 
+/* ——— hover-prompt on split images ——————————————— */
+.split-img-wrap{
+  position:relative;display:block;overflow:hidden;
+}
+.split-img-wrap .split-img{
+  transition:transform .5s ease;
+}
+.split-img-wrap:hover .split-img{
+  transform:scale(1.08);
+}
+
+/* overlay prompt */
+.img-prompt{
+  position:absolute;inset:0;display:flex;align-items:center;justify-content:center;
+  background:rgba(0,0,0,.55);color:#fff;font-weight:700;letter-spacing:.08em;
+  text-transform:uppercase;font-size:1.1rem;opacity:0;transition:opacity .4s;
+}
+.split-img-wrap:hover .img-prompt{opacity:1;}
+
+ .form-field:focus {
+  border-color: #ffc73b !important;
+  box-shadow: 0 0 4px #ffc73b44;
+  transition: border-color 0.25s, box-shadow 0.25s;
+}
+.form-field.is-invalid {
+  border-color: #dc3545 !important;
+  background: #fff0f3;
+}
+ 

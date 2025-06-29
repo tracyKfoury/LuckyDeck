@@ -1,0 +1,48 @@
+.contact-section {
+  background: #181920;
+  color: #ffffff;
+}
+.contact-section {
+  background: #16171c !important;   /* or whatever dark shade you want */
+  min-height: 100vh;
+}
+
+.contact-section .bg-dark {
+  background: #16171c !important;
+  color: #fff;
+  border: 1.5px solid #ffc73b22;
+  box-shadow: 0 8px 32px #0006;
+}
+
+
+.contact-section label {
+  color: #ffc73b;
+  letter-spacing: 1px;
+}
+
+.form-control.form-field {
+  background: #23232b;
+  color: #fff;
+  border-radius: 12px;
+  border: 1.5px solid #ffc73b55;
+  transition: border-color 0.25s;
+}
+
+.form-control.form-field:focus {
+  border-color: #ffc73b;
+  background: #23232b;
+  color: #fff;
+  box-shadow: 0 0 0 2px #ffc73b44;
+}
+
+.btn.btn-dark {
+  background: linear-gradient(90deg, #FFC73B 60%, #ffe9b2 120%);
+  color: #181920;
+  border: none;
+  box-shadow: 0 3px 16px #0004;
+  transition: background 0.15s, color 0.15s;
+}
+.btn.btn-dark:hover, .btn.btn-dark:focus {
+  background: #fff;
+  color: #FFC73B;
+}

@@ -1,0 +1,105 @@
+/* ——— ONE place to swap your background ——————————————— */
+body{
+  height:100vh;margin:0;
+  background:url("slot2.png") center/cover no-repeat #000; /* <-- change file name */
+  display:flex;justify-content:center;align-items:center;
+  font-family:system-ui,sans-serif;color:#fff;
+}
+
+/* slot “cabinet” -------------------------------------------------------- */
+.machine{display:flex;flex-direction:column;align-items:center;gap:2.4rem}
+
+/* reels row */
+#reels{display:flex;gap:1.6rem}
+
+/* single reel window */
+.reel{
+  width:5.2rem;height:5.2rem;background:#000;
+  border:4px solid #ffd54d;border-radius:.45rem;
+  box-shadow:0 0 14px 3px #ffd54d;
+  display:flex;justify-content:center;align-items:center;
+  font-size:2.6rem;font-weight:700;
+}
+
+/* spin button */
+#spinBtn{
+  background:#e40000;border:none;color:#fff;
+  padding:.9rem 4rem;border-radius:2.1rem;
+  font-size:1.25rem;font-weight:700;cursor:pointer;
+  box-shadow:0 0 14px #e40000;transition:transform .15s,box-shadow .15s;
+}
+#spinBtn:hover{transform:scale(1.12);box-shadow:0 0 20px #ff1a1a;}
+#spinBtn:disabled{opacity:.35;cursor:not-allowed}
+
+/* blur / roll effect */
+@keyframes spinRoll{
+  0%{filter:blur(0)   ;transform:translateY(0)  }
+ 50%{filter:blur(6px);transform:translateY(42px)}
+100%{filter:blur(0)   ;transform:translateY(0)  }
+}
+.neon-title{
+  font-size:clamp(2.5rem, 5vw, 4rem);
+  letter-spacing:.15em;
+  color:#ff2c2c;
+  text-shadow:
+     0 0 4px #0e0d0d,
+     0 0 8px #1d1b1b,
+     0 0 16px #000000,
+     0 0 32px #000000;
+  margin-bottom:2.5rem;             /* gap above machine */
+  animation:pulse 1s ease-in-out infinite;
+}
+@keyframes pulse{
+  0%,100%{opacity:1}
+  50%{opacity:.6}
+}
+#creditsBar{
+  margin-bottom:1.8rem;
+  font-size:1.4rem;
+  background:rgba(0,0,0,.55);
+  padding:.4rem 1.2rem;border-radius:.6rem;
+  box-shadow:0 0 8px #111 inset;
+}
+#creditsBar strong{color:#ffd54d;}
+.payout-banner{
+  font-size:1rem;
+  color:#fff;margin-bottom:1.6rem;
+}
+.payout-banner strong{color:#ffd54d;}
+.payout-banner .win{color:#000000;font-weight:700;}
+/* ─── FULL-SCREEN BACKDROP (you already had `.hero`) ───────────── */
+.hero, .hero img{
+  position:fixed;
+  inset:0;
+  width:100%;
+  height:100%;
+  object-fit:cover;      /* covers the viewport */
+}
+
+/* ─── STAGE : everything you want centred ─────────────────────── */
+/*  put this class on the element that wraps title + reels + btn   */
+.stage{
+  position:fixed;        /* take out of normal flow */
+  top:50%; left:50%;     /* move anchor into dead centre */
+  transform:translate(-50%,-50%);  /* pull it back ½ width & height */
+  text-align:center;
+  pointer-events:none;   /* so only its children receive clicks   */
+}
+
+/* children stay interactive */
+.stage > *{ pointer-events:auto; }
+
+/* tidy gaps inside stage */
+.stage .hud         { margin:.8rem 0 1.2rem; display:flex; gap:2rem; justify-content:center; }
+.stage #reels       { margin-bottom:1.8rem; }
+.stage #spinBtn     { margin-top:.3rem; }
+
+/* neon title just for demo – keep / tweak as you wish */
+.neon-title{
+  font-size:clamp(2.5rem,6vw,5rem);
+  color:#ff3535;
+  font-weight:700;
+  text-shadow:0 0 18px rgba(255,55,55,.7);
+}
+
+/* you keep all existing reel / button styling below … */

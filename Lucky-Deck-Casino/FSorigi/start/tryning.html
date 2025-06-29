@@ -1,0 +1,707 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <!-- SEO / link-card blurb -->
+  <meta name="description"
+        content="Lucky Deck – play browser-only Blackjack, spin Jackpot 777 and more, 24 / 7. Shuffle, deal and win right from your phone or desktop.">
+
+  <title>Lucky Deck Casino</title>
+
+  <!-- Bootstrap & Bootstrap-Icons -->
+  <link rel="stylesheet"
+        href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css">
+  <link rel="stylesheet"
+        href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css">
+
+  <!-- Your main stylesheet -->
+  <link rel="stylesheet" href="styling.css">
+
+  <!-- ▸ CSS-transition requirement (project brief)             -->
+  <!--   #1: .link-red-arrow   #2: .reel spin/blur animation     -->
+</head>
+
+<body>
+
+<!-----------------------------------------------------------------
+  TOP BAR
+------------------------------------------------------------------>
+<nav class="navbar navbar-dark topbar px-lg-4">
+  <div class="container-fluid position-relative">
+
+    <!-- left cluster -->
+    <div class="d-flex align-items-center gap-3">
+      <button class="btn menu-btn d-lg-flex align-items-center gap-1 p-0"
+              data-bs-toggle="offcanvas" data-bs-target="#mainMenu">
+        <i class="bi bi-list fs-2 lh-1"></i>
+        <span class="d-none d-md-inline">Menu</span>
+      </button>
+
+      <button class="btn become-btn d-none d-lg-inline"
+              onclick="location.href='#signup'">Become&nbsp;a&nbsp;Member
+      </button>
+    </div>
+
+    <!-- centred logo -->
+    <a href="#"
+       class="brand-wrap position-absolute top-50 start-50 translate-middle text-decoration-none">
+      <img src="deck.jpg" class="brand-icon" alt="">
+      <span class="brand-name">Lucky&nbsp;Deck</span>
+    </a>
+    
+
+
+    <!-- right cluster -->
+  <div class="d-none d-lg-flex gap-4 align-items-center ms-auto">
+    <a class="utility-link" href="buy-chips.html">
+    <i class="bi bi-wallet2"></i> Add Credits
+    </a>
+    <a class="utility-link" href="leaderboard.html">
+    <i class="bi bi-stars"></i> Hall&nbsp;of&nbsp;Fame
+    </a>
+  </div>
+
+  </div>
+</nav>
+
+<!-----------------------------------------------------------------
+  GAME STRIP
+------------------------------------------------------------------>
+<nav class="branch-strip d-none d-lg-block">
+  <ul class="container nav justify-content-center gap-4 py-2">
+    <li class="nav-item"><a class="nav-link" href="blackjack.html">BLACKJACK</a></li>
+    <li class="nav-item"><a class="nav-link" href="jackpot\jackpot.html">JACKPOT&nbsp;777</a></li>
+    <li class="nav-item"><a class="nav-link" href="limited\limited.html">LIMITED&nbsp;EDITION</a></li>
+  </ul>
+</nav>
+
+<main id="content"><!-- semantic wrapper ---------------------------------->
+
+<!-----------------------------------------------------------------
+  HERO
+------------------------------------------------------------------>
+<header id="hero" class="carousel slide carousel-fade" data-bs-ride="carousel">
+  <div class="carousel-indicators mb-4 mb-lg-5">
+    <button type="button" data-bs-target="#hero" data-bs-slide-to="0"
+            class="active" aria-label="Slide 1"></button>
+    <button type="button" data-bs-target="#hero" data-bs-slide-to="1"
+            aria-label="Slide 2"></button>
+  </div>
+
+  <div class="carousel-inner">
+
+    <!-- slide 1 -->
+    <div class="carousel-item active">
+      <img src="Background 1.png" alt="" class="w-100 h-100 object-fit-cover">
+      <div class="dark-overlay"></div>
+      <div class="hero-content">
+        <h2 class="display-1 fw-bold text-uppercase lh-1 mb-3">Blackjack</h2>
+        <p class="h3 fw-bold text-uppercase mb-4">Beat the dealer!</p>
+        <a href="blackjack.html" class="btn hero-btn px-5 py-3">Play&nbsp;Now</a>
+      </div>
+    </div>
+
+    <!-- slide 2 -->
+    <div class="carousel-item">
+      <img src="photo.jpeg" alt="" class="w-100 h-100 object-fit-cover">
+      <div class="dark-overlay"></div>
+      <div class="hero-content">
+        <h2 class="display-1 fw-bold text-uppercase lh-1 mb-3">Jackpot&nbsp;777</h2>
+        <p class="h3 fw-bold text-uppercase mb-4">One spin – huge wins</p>
+        <a href="jackpot\jackpot.html" class="btn hero-btn px-5 py-3">Try&nbsp;Your&nbsp;Luck</a>
+      </div>
+    </div>
+
+  </div>
+
+  <button class="carousel-control-prev" type="button"
+          data-bs-target="#hero" data-bs-slide="prev" aria-label="Previous slide">
+    <span class="carousel-control-prev-icon"></span>
+  </button>
+  <button class="carousel-control-next" type="button"
+          data-bs-target="#hero" data-bs-slide="next" aria-label="Next slide">
+    <span class="carousel-control-next-icon"></span>
+  </button>
+</header>
+
+<!-----------------------------------------------------------------
+  WELCOME
+------------------------------------------------------------------>
+<section id="welcome" class="py-5 text-center bg-light">
+  <div class="container px-lg-5">
+    <h2 class="display-5 fw-bold mb-4">Welcome&nbsp;to&nbsp;Lucky&nbsp;Deck&nbsp;Casino</h2>
+
+    <!-- casino-welcome blurb -->
+<p class="lead">
+  Craving Vegas thrills without the airfare? <strong class="fw-bold">Lucky Deck</strong> brings the strip to your screen.<br>
+  Your new home for <strong class="fw-bold">Instant-deal Blackjack</strong>, a one-click
+  <strong class="fw-bold">Jackpot 777</strong> wheel, and a brand-new
+  <strong class="fw-bold">limited-edition game</strong> every week!
+</p>
+
+
+    <p class="lead mx-auto mb-4" style="max-width:840px">
+  Our tables never close, the stakes keep climbing, and every week fresh features drop to keep your luck (and adrenaline) running hot.
+  <strong class="fw-bold">Shuffle up, spin big, and let the good hands roll.</strong>
+</p>
+
+
+    <p class="fw-semibold text-danger small mb-4">
+      Over 18 only – Please play responsibly.
+    </p>
+
+    <a href="#blackjackSection" class="link-red-arrow">
+      PLAY&nbsp;NOW <i class="bi bi-arrow-right"></i>
+    </a>
+  </div>
+</section>
+
+<!-----------------------------------------------------------------
+  SPLIT A  – Blackjack
+------------------------------------------------------------------>
+<section class="split-section" id="blackjackSection">
+  <div class="container-fluid px-0">
+    <div class="row g-0">
+      <div class="col-12 col-lg-6">
+        <a href="blackjack.html" class="split-img-wrap">
+          <img src="Bckground2.webp" alt="" class="w-100 h-100 split-img">
+          <span class="img-prompt">Play&nbsp;Blackjack</span>
+        </a>
+      </div>
+
+      <div class="col-12 col-lg-6 d-flex align-items-center">
+        <div class="split-copy p-5 p-xl-6">
+          <h2 class="split-h mb-4">Shuffle<br>Deal<br>Beat the Dealer</h2>
+          <p class="lead mb-4">
+            Fancy a quick hand of <strong>Blackjack</strong>? Draw a fresh shoe and play the dealer in seconds.
+            Share your win-loss streak on our live leaderboard.
+          </p>
+          <a href="blackjack.html" class="link-red-arrow">
+            Play&nbsp;Blackjack <i class="bi bi-arrow-right"></i>
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-----------------------------------------------------------------
+  SPLIT B  – Jackpot
+------------------------------------------------------------------>
+<section class="split-section" id="jackpotSection">
+  <div class="container-fluid px-0">
+    <div class="row g-0 flex-lg-row-reverse">
+      <div class="col-12 col-lg-6">
+        <a href="jackpot\jackpot.html" class="split-img-wrap">
+          <img src="jackp.jpg" alt="" class="w-100 h-100 split-img">
+          <span class="img-prompt">Play&nbsp;Jackpot</span>
+        </a>
+      </div>
+
+      <div class="col-12 col-lg-6 d-flex align-items-center">
+        <div class="split-copy p-5 p-xl-6">
+          <h2 class="split-h mb-4">Spin<br>Hit&nbsp;777<br>Win Big</h2>
+          <p class="lead mb-4">
+            One click, one spin – <strong>Jackpot 777</strong> is the instant-gratification wheel. Land on gold to pocket a fortune!
+          </p>
+          <a href="jackpot\jackpot.html" class="link-red-arrow">
+            Try&nbsp;the&nbsp;Jackpot <i class="bi bi-arrow-right"></i>
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-----------------------------------------------------------------
+  FAQ
+------------------------------------------------------------------>
+<section id="faq" class="faq-section py-5">
+  <div class="container">
+    <h2 class="display-6 fw-bold text-uppercase mb-5 text-center">Frequently Asked Questions</h2>
+
+    <div class="accordion" id="faqAccordion">
+
+      <!-- Q1 -->
+      <div class="accordion-item border-0 border-bottom">
+        <h2 class="accordion-header" id="faq1-h">
+          <button class="accordion-button collapsed faq-btn"
+                  data-bs-toggle="collapse" data-bs-target="#faq1-b"
+                  aria-expanded="false" aria-controls="faq1-b">
+            What games can I play on Lucky Deck?
+          </button>
+        </h2>
+        <div id="faq1-b" class="accordion-collapse collapse"
+             aria-labelledby="faq1-h" role="region" data-bs-parent="#faqAccordion">
+          <div class="accordion-body">
+            Shuffle a fresh 52-card deck, play live Blackjack or spin the Jackpot 777 wheel.
+            New mini-games arrive every week.
+          </div>
+        </div>
+      </div>
+
+      <!-- Q2 -->
+      <div class="accordion-item border-0 border-bottom">
+        <h2 class="accordion-header" id="faq2-h">
+          <button class="accordion-button collapsed faq-btn"
+                  data-bs-toggle="collapse" data-bs-target="#faq2-b"
+                  aria-expanded="false" aria-controls="faq2-b">
+            Do I need to download or register?
+          </button>
+        </h2>
+        <div id="faq2-b" class="accordion-collapse collapse"
+             aria-labelledby="faq2-h" role="region" data-bs-parent="#faqAccordion">
+          <div class="accordion-body">
+            Yes – an account is required. Once you create one your progress syncs across every device.
+          </div>
+        </div>
+      </div>
+
+      <!-- Q3 -->
+      <div class="accordion-item border-0 border-bottom">
+        <h2 class="accordion-header" id="faq3-h">
+          <button class="accordion-button collapsed faq-btn"
+                  data-bs-toggle="collapse" data-bs-target="#faq3-b"
+                  aria-expanded="false" aria-controls="faq3-b">
+            How does payment work on Lucky Deck?
+          </button>
+        </h2>
+        <div id="faq3-b" class="accordion-collapse collapse"
+             aria-labelledby="faq3-h" role="region" data-bs-parent="#faqAccordion">
+          <div class="accordion-body">
+            Deposit securely with any major card or e-wallet. Your balance updates instantly and cash-out is available 24 / 7.
+          </div>
+        </div>
+      </div>
+
+      <!-- Q4 -->
+      <div class="accordion-item border-0 border-bottom">
+        <h2 class="accordion-header" id="faq4-h">
+          <button class="accordion-button collapsed faq-btn"
+                  data-bs-toggle="collapse" data-bs-target="#faq4-b"
+                  aria-expanded="false" aria-controls="faq4-b">
+            What are the age requirements?
+          </button>
+        </h2>
+        <div id="faq4-b" class="accordion-collapse collapse"
+             aria-labelledby="faq4-h" role="region" data-bs-parent="#faqAccordion">
+          <div class="accordion-body">
+            Lucky Deck is for players aged 18 or older. Verification may be required.
+          </div>
+        </div>
+      </div>
+
+    </div><!-- /accordion -->
+  </div>
+</section>
+
+<!-----------------------------------------------------------------
+  SIGN-UP
+------------------------------------------------------------------>
+<section id="signup" class="signup-section py-5">
+  <div class="container">
+
+    <h2 class="display-6 fw-bold text-center text-uppercase mb-5">
+      Sign Up for Offers &amp; Rewards
+    </h2>
+
+    <form id="newsletterForm" class="row g-4 justify-content-center" action="thanks.html" method="GET">
+
+      <!-- inputs -->
+      <div class="col-lg-5">
+        <input class="form-control form-field"
+               id="fullname" name="fullname"
+               placeholder="Full name" required>
+        <input class="form-control form-field mt-3"
+               id="email" name="email"
+               placeholder="Email address" type="email" required>
+        <input class="form-control form-field mt-3"
+               id="dob" name="dob"
+               placeholder="Date of Birth" type="date" required>
+      </div>
+
+      <!-- checkboxes -->
+      <div class="col-lg-5">
+        <div class="form-check mb-3">
+          <input id="sense" name="sense" class="form-check-input square" type="checkbox" required>
+          <label class="form-check-label" for="sense">
+            I confirm I'm not on the voluntary self-exclusion scheme (SENSE).
+          </label>
+        </div>
+
+        <div class="form-check mb-3">
+          <input id="age" name="age" class="form-check-input square" type="checkbox" required>
+          <label class="form-check-label" for="age">
+            I confirm I'm 18 years or over.
+          </label>
+        </div>
+
+        <div class="form-check mb-3">
+          <input id="marketing" name="marketing" class="form-check-input square" type="checkbox">
+          <label class="form-check-label" for="marketing">
+            Add me to the Lucky Deck mailing list.
+          </label>
+        </div>
+      </div>
+
+      <!-- submit -->
+      <div class="col-12 d-flex justify-content-center">
+        <button type="submit" class="btn btn-dark px-5 py-3 text-uppercase fw-bold">
+          Submit
+        </button>
+      </div>
+    </form>
+  </div>
+</section>
+
+
+</main><!-- /#content ----------------------------------------------------->
+
+<!-----------------------------------------------------------------
+  FOOTER
+------------------------------------------------------------------>
+<footer class="footer-dark pt-5 pb-4">
+  <div class="container">
+
+    <div class="row gy-4">
+
+      <!-- search -->
+      <div class="col-12 col-md-6 col-lg-3">
+        <h6 class="footer-h">Search</h6>
+        <div class="input-group">
+          <input class="form-control footer-input" placeholder="Search">
+          <span class="input-group-text footer-input"><i class="bi bi-search"></i></span>
+        </div>
+      </div>
+
+      <!-- games -->
+      <div class="col-6 col-lg-3">
+        <h6 class="footer-h">Games</h6>
+        <ul class="footer-list">
+          <li><a href="blackjack.html">Blackjack</a></li>
+          <li><a href="jackpot\jackpot.html">Jackpot 777</a></li>
+        </ul>
+      </div>
+
+      <!-- discover -->
+      <div class="col-6 col-lg-3">
+        <h6 class="footer-h">Discover</h6>
+        <ul class="footer-list">
+          <li><a href="#faq">FAQ</a></li>
+          <li><a href="#signup">Sign Up</a></li>
+          <li><a href="contact\contact.html">Contact-Us</a></li>
+        </ul>
+      </div>
+
+      <!-- membership -->
+      <div class="col-12 col-lg-3">
+        <h6 class="footer-h">Membership</h6>
+        <button class="btn btn-gold w-100"
+                onclick="location.href='#signup'">Become a Member</button>
+      </div>
+
+    </div>
+
+    <div class="d-flex gap-3 mt-5">
+      <a class="social" href="#"><i class="bi bi-facebook"></i></a>
+      <a class="social" href="#"><i class="bi bi-twitter"></i></a>
+      <a class="social" href="#"><i class="bi bi-instagram"></i></a>
+      <a class="social" href="#"><i class="bi bi-youtube"></i></a>
+    </div>
+
+    <div class="small mt-4 text-secondary">
+      © 2025 Lucky Deck Casino  •  18+ Play Responsibly
+    </div>
+  </div>
+</footer>
+
+<!-----------------------------------------------------------------
+  OFF-CANVAS NAV
+------------------------------------------------------------------>
+<div class="offcanvas offcanvas-start text-bg-dark" id="mainMenu"
+     aria-label="Site menu" tabindex="-1">
+  <div class="offcanvas-header">
+    <h5 class="offcanvas-title">Menu</h5>
+    <button class="btn-close btn-close-white" data-bs-dismiss="offcanvas"></button>
+  </div>
+  <div class="offcanvas-body">
+    <ul class="nav flex-column gap-2">
+      <li><a class="nav-link text-light" href="blackjack.html">Blackjack</a></li>
+      <li><a class="nav-link text-light" href="jackpot\jackpot.html">Jackpot 777</a></li>
+      <li><a class="nav-link text-light" href="limited\limited.html">Limited-Edition</a></li>
+      <li><a class="nav-link text-light" href="contact\contact.html">Contact-Us</a></li>
+      
+      
+    </ul>
+  </div>
+</div>
+
+
+<!-----------------------------------------------------------------
+  SMOOTH-SCROLL ANCHORS
+------------------------------------------------------------------>
+<script>
+document.querySelectorAll('a[href^="#"]').forEach(link=>{
+  link.addEventListener('click', e=>{
+    const id = link.getAttribute('href').slice(1);
+    const target = document.getElementById(id);
+    if (target){
+      e.preventDefault();
+      target.scrollIntoView({behavior:'smooth'});
+    }
+  });
+});
+</script>
+
+<!-- Firebase (move to bottom, defer) -->
+<script type="module" defer
+  src="https://www.gstatic.com/firebasejs/9.23.0/firebase-app.js"></script>
+<script type="module" defer
+  src="https://www.gstatic.com/firebasejs/9.23.0/firebase-firestore.js"></script>
+
+<!-- Your app logic -->
+<script type="module" defer src="jstest.js"></script>
+
+<!-- Bootstrap bundle LAST -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+<script>
+document.getElementById('newsletterForm').addEventListener('submit', function(e) {
+  e.preventDefault(); // Prevent default submit
+
+  // Get values
+  const name = document.getElementById('fullname').value.trim();
+  const email = document.getElementById('email').value.trim();
+  const dob = document.getElementById('dob').value;
+  const sense = document.getElementById('sense').checked;
+  const ageBox = document.getElementById('age').checked;
+  const marketing = document.getElementById('marketing').checked;
+
+  // Age validation
+  function calculateAge(dobString) {
+    const dobDate = new Date(dobString);
+    const today = new Date();
+    let age = today.getFullYear() - dobDate.getFullYear();
+    const m = today.getMonth() - dobDate.getMonth();
+    if (m < 0 || (m === 0 && today.getDate() < dobDate.getDate())) {
+      age--;
+    }
+    return age;
+  }
+
+  // Form validation logic
+  if (!name || !email || !dob) {
+    alert('Please fill in all fields.');
+    return;
+  }
+  if (!sense) {
+    alert('You must confirm you are not on the self-exclusion scheme.');
+    return;
+  }
+  if (!ageBox) {
+    alert('You must confirm you are 18 years or over.');
+    return;
+  }
+  const userAge = calculateAge(dob);
+  if (isNaN(userAge) || userAge < 18) {
+    alert('You must be at least 18 years old to sign up.');
+    return;
+  }
+
+  // Save user data (for demo, localStorage, you can send to backend here)
+  const user = { name, email, dob, sense, age: userAge, marketing, balance: 1000 };
+  localStorage.setItem('currentUser', JSON.stringify(user));
+
+  // Redirect or show a message
+  window.location.href = 'thanks.html';
+});
+</script>
+<!-- Jackpot Popup Modal (Casino Theme) -->
+<div id="jackpot-modal" style="display:none; position:fixed; z-index:9999; left:0; top:0; width:100vw; height:100vh; background:rgba(0,0,0,0.88); justify-content:center; align-items:center;">
+  <div style="
+      background: #111016;
+      border-radius: 18px;
+      padding: 34px 24px 30px 24px;
+      max-width: 390px;
+      width: 92vw;
+      box-shadow: 0 8px 32px rgba(0,0,0,0.8);
+      text-align: center;
+      border: 2.5px solid #FFC73B;
+      position: relative;
+      font-family: 'Montserrat', 'Segoe UI', Arial, sans-serif;
+    ">
+    <button onclick="closeJackpot()" style="
+        position: absolute;
+        right: 17px; top: 16px;
+        background: none;
+        border: none;
+        font-size: 1.7em;
+        color: #FFC73B;
+        cursor: pointer;
+        font-weight: bold;
+      ">&times;</button>
+    <h2 style="
+        color: #FFC73B;
+        margin-bottom: 12px;
+        letter-spacing: 1px;
+        font-weight: bold;
+        font-size: 1.8em;
+        text-shadow: 0 2px 8px #000;
+      ">JACKPOT PRIZE!</h2>
+    <p style="
+        font-size: 1.23em;
+        font-weight: bold;
+        margin-bottom: 19px;
+        color: #fff;
+        text-shadow: 0 2px 8px #000;
+      ">
+      Play to win <span style="color:#FFC73B;">$1,000,000</span>!
+    </p>
+    <div style="margin-bottom: 10px;">
+      <label for="currency" style="color: #fff; font-weight: 500;">Show jackpot in:</label>
+      <select id="currency" onchange="convertJackpot()" style="
+          margin: 8px 0 0 0;
+          background: #1a1a23;
+          color: #FFC73B;
+          border: 1.3px solid #FFC73B;
+          border-radius: 6px;
+          padding: 4px 12px;
+          font-size: 1em;
+          font-weight: 600;
+          outline: none;
+        ">
+        <option value="USD">US Dollar (USD)</option>
+        <option value="EUR">Euro (EUR)</option>
+        <option value="GBP">British Pound (GBP)</option>
+        <option value="PLN">Polish Zloty (PLN)</option>
+        <option value="TRY">Turkish Lira (TRY)</option>
+        <option value="CNY">Chinese Yuan (CNY)</option>
+        <option value="CHF">Swiss Franc (CHF)</option>
+        <option value="AUD">Australian Dollar (AUD)</option>
+        <option value="NZD">New Zealand Dollar (NZD)</option>
+        <option value="KRW">South Korean Won (KRW)</option>
+        <option value="DKK">Danish Krone (DKK)</option>
+        <option value="HKD">Hong Kong Dollar (HKD)</option>
+      </select>
+      <div style="margin-top: 8px; min-height: 28px;">
+        <span id="jackpot-converted" style="
+            font-size: 1.13em;
+            color: #FFC73B;
+            font-weight: bold;
+            text-shadow: 0 1px 4px #000;
+          "></span>
+      </div>
+    </div>
+    <button onclick="closeJackpot()" style="
+        margin-top: 13px;
+        background: linear-gradient(90deg, #FFC73B 40%, #ffe9b2 120%);
+        color: #111016;
+        border: none;
+        padding: 10px 36px;
+        border-radius: 8px;
+        font-weight: bold;
+        cursor: pointer;
+        font-size: 1.17em;
+        letter-spacing: 1px;
+        box-shadow: 0 4px 14px #0004;
+        transition: background 0.16s, color 0.16s;
+      "
+onmouseover="this.style.background='#fff'; this.style.color='#FFC73B';"
+onmouseout="this.style.background='linear-gradient(90deg, #FFC73B 40%, #ffe9b2 120%)'; this.style.color='#111016';"
+    >
+      Play Now
+    </button>
+  </div>
+</div>
+ 
+<script>
+// Use your real free-tier API key here:
+const apiKey = 'cae0455fb34dd2a8c1588a8625dae81b';
+ 
+window.addEventListener('DOMContentLoaded', function() {
+  setTimeout(showJackpot,200000);
+});
+ 
+function showJackpot() {
+  document.getElementById('jackpot-modal').style.display = 'flex';
+}
+function closeJackpot() {
+  document.getElementById('jackpot-modal').style.display = 'none';
+}
+ 
+function convertJackpot() {
+  const want = document.getElementById('currency').value;
+  const convertedSpan = document.getElementById('jackpot-converted');
+  if (want === 'USD') {
+    convertedSpan.textContent = '';
+    return;
+  }
+  convertedSpan.textContent = 'Loading...';
+ 
+fetch(`https://api.exchangeratesapi.io/v1/latest?access_key=${apiKey}`)
+    .then(res => res.json())
+    .then(data => {
+      if (data && data.rates && data.rates.USD && data.rates[want]) {
+        const jackpotInEUR = 1000000 / data.rates.USD;
+        const converted = jackpotInEUR * data.rates[want];
+        convertedSpan.textContent =
+          '≈ ' + converted.toLocaleString('en-US', { style: 'currency', currency: want });
+      } else if (data && data.error) {
+convertedSpan.textContent = 'Error: ' + data.error.info;
+      } else {
+        convertedSpan.textContent = 'Conversion unavailable.';
+      }
+    })
+    .catch(() => {
+      convertedSpan.textContent = 'Error fetching rate.';
+    });
+}
+</script>
+ 
+<style>
+@media (max-width: 540px) {
+  #jackpot-modal > div {
+    padding: 16px !important;
+    font-size: 1em !important;
+    max-width: 98vw !important;
+  }
+}
+#jackpot-modal {
+  display: none;
+  position: fixed;
+  z-index: 9999;
+  left: 0; top: 0; width: 100vw; height: 100vh;
+  background: rgba(0,0,0,0.88);
+  justify-content: center;
+  align-items: center;
+}
+</style>
+<script>
+document.getElementById('contactForm').addEventListener('input', function(e) {
+  if (e.target.classList.contains('form-field')) {
+    e.target.classList.remove('is-invalid');
+  }
+});
+document.getElementById('contactForm').addEventListener('submit', function(e) {
+  e.preventDefault();
+  let valid = true;
+  const name = document.getElementById('contactName');
+  const email = document.getElementById('contactEmail');
+  const msg = document.getElementById('contactMsg');
+
+  if (!name.value.trim()) { name.classList.add('is-invalid'); valid = false; }
+  if (!/^[\w.+-]+@\w+\.\w{2,}$/.test(email.value.trim())) { email.classList.add('is-invalid'); valid = false; }
+  if (!msg.value.trim()) { msg.classList.add('is-invalid'); valid = false; }
+
+  if (!valid) return;
+
+  // Show thank you message and clear form
+  document.getElementById('contactThanks').textContent = "Thank you for reaching out! We'll be in touch soon.";
+  document.getElementById('contactThanks').classList.remove('d-none');
+  e.target.reset();
+});
+</script>
+
+</body>
+</html>

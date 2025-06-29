@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Lucky Deck – Mini Slot</title>
+
+  <!-- styles -->
+  <link rel="stylesheet" href="slot.css">
+</head>
+<body>
+
+  <!-- full-screen background -->
+  <div class="hero">
+    <!--  just swap the file name if you want a different backdrop  -->
+    <img src="slott.png" alt="">
+  </div>
+
+  <!-- ──  STAGE  ──  (everything centred) -->
+  <div class="stage">
+
+    <!-- neon header -->
+    <h1 class="neon-title">JACKPOT&nbsp;777</h1>
+
+    <!-- credits + payout line (HUD) -->
+    <div class="hud">
+      <div id="creditsBar">Credits: <strong id="credits">100</strong></div>
+      <div class="payout-banner">
+        Match <strong>777</strong> → <span class="win">JACKPOT!</span>
+      </div>
+    </div>
+
+    <!-- slot machine -->
+    <div class="machine">
+      <div id="reels">
+        <div class="reel"><span>7</span></div>
+        <div class="reel"><span>7</span></div>
+        <div class="reel"><span>7</span></div>
+      </div>
+    </div>
+
+    <!-- spin button -->
+    <button id="spinBtn">SPIN</button>
+
+  </div><!-- /stage -->
+
+  <!-- logic -->
+  <script src="slot.js"></script>
+</body>
+</html>

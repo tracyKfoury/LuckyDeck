@@ -1,0 +1,118 @@
+/* -------- global reset -------- */
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:system-ui,sans-serif;color:#fff;background:#000}
+
+/* -------- backdrop -------- */
+body::before{
+  content:"";position:fixed;inset:0;z-index:-2;
+  background:
+    radial-gradient(circle at center,
+                    transparent 0 35%,rgba(0,0,0,.75) 75%),
+    url("https://i.imgur.com/MOObKww.png");    /* green felt */
+  background-size:cover;
+}
+
+/* -------- weekly badge -------- */
+.badge-weekly{
+  background:#ff48c4;
+  padding:.25rem .7rem;border-radius:.7rem;
+  font-size:.75rem;font-weight:600;
+  letter-spacing:.5px;
+  box-shadow:0 0 10px #ff48c4;
+}
+
+/* -------- neon page title -------- */
+.neon-title{
+  color:#ffe600;
+  text-shadow:0 0 6px #ffe600,0 0 20px #ff9100;
+}
+
+/* -------- game table -------- */
+.game-box{
+  max-width:420px;
+  background:rgba(0,0,0,.55);
+  border:2px solid #00ffa9;
+  border-radius:.75rem;
+  padding:2rem 1.5rem;
+  box-shadow:0 0 18px 4px rgba(0,255,200,.4);
+}
+
+/* ---------- fix card-position wobble ---------- */
+
+/* 1) make the host a 3-D stage */
+.card-spot{
+  position:relative;          /*  ← NEW  (was static) */
+  width:140px;
+  height:200px;
+  margin-inline:auto;
+  perspective:800px;
+}
+
+/* 2) keep the cube absolutely centred */
+.card-img{
+  position:absolute;          /*  ← NEW */
+  inset:0;                    /*  ← NEW  (top:0 right:0 bottom:0 left:0) */
+  transform-style:preserve-3d;
+  transition:transform .6s;
+}
+
+/* 3) card faces/back now also fill the cube */
+.card-back,
+.card-face{
+  position:absolute;          /* already set for face, now also for back */
+  inset:0;
+  border-radius:.4rem;
+  backface-visibility:hidden;
+}
+.card-face{transform:rotateY(180deg)}
+
+.card-img.flip{transform:rotateY(180deg)}
+
+/* quick simple back-of-card */
+.card-back{
+  position:absolute;inset:0;border-radius:.4rem;
+  backface-visibility:hidden;
+  background:url("data:image/svg+xml;utf8,\
+  <svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 226 314'>\
+    <rect width='100%' height='100%' rx='18' ry='18' fill='%23222222'/>\
+    <rect x='14' y='14' width='198' height='286' rx='14' ry='14'\
+          fill='%2360b000' stroke='%23fff' stroke-width='6'/>\
+    <circle cx='113' cy='157' r='58' fill='%23fff'/>\
+    <text x='113' y='183' text-anchor='middle' font-size='96'\
+          font-family='Arial' font-weight='700' fill='%2360b000'>★</text>\
+  </svg>") center/contain no-repeat;
+}
+
+/* front image sits on back side of 3-D cube */
+.card-face{
+  position:absolute;inset:0;border-radius:.4rem;
+  backface-visibility:hidden;transform:rotateY(180deg);
+}
+
+/* guess buttons */
+.btn-guess{
+  font-weight:700;
+  transition:transform .15s,box-shadow .15s;
+  box-shadow:0 0 12px rgba(255,255,255,.25);
+}
+.btn-guess:hover{transform:scale(1.07);box-shadow:0 0 18px 4px rgba(255,255,255,.4)}
+.btn-guess:disabled{opacity:.45;cursor:not-allowed}
+/* == NORMALISE FINAL-SIZE OF REVEALED CARDS ===================== */
+
+/* host frame – exactly the size of the green back card */
+.card-spot{
+  width:140px;          /*  ← match the green placeholder size */
+  height:200px;
+  overflow:hidden;      /* cut anything larger than the frame   */
+  position:relative;    /* keep faces positioned absolutely     */
+}
+
+/* every real card we draw from the API */
+.card-spot img{
+  position:absolute;    /* sit on top of the green back         */
+  inset:0;              /* full cover                           */
+  width:100%;
+  height:100%;
+  object-fit:contain;   /* keep aspect ratio, no stretch        */
+  border-radius:.4rem;  /* same round-corners as the back       */
+}
